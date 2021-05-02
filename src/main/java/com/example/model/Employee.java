@@ -40,4 +40,8 @@ public class Employee {
         this.department = department;
     }
 
+    public Department getDepartment() {
+        return department;
+    }
+
 }

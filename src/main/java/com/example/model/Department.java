@@ -15,7 +15,7 @@ public class Department {
     @Column
     private String name;
 
-    public Department (String name, int number) {
+    public Department(String name, int number) {
         this.name = name;
     }
 
@@ -32,6 +32,10 @@ public class Department {
 
     public void addEmployee(Employee employee) {
         this.employees.add(employee);
+    }
+
+    public Set<Employee> getEmployees() {
+        return employees;
     }
 
 }
