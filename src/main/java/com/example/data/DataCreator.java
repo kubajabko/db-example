@@ -45,11 +45,18 @@ public class DataCreator {
         Employee emp12 = new Employee("Damian", "Mazur");
         employeesList.add(emp12);
         Employee emp13 = new Employee("Patryk", "Krawczyk");
-        employeesList.add(emp13);
-        dep1.addEmployee(emp1);
-        emp1.setDepartment(dep1);
-        dep1.addEmployee(emp2);
-        emp2.setDepartment(dep1);
+        employeeDepartmentMatch(emp1, dep1);
+        employeeDepartmentMatch(emp2, dep1);
+        employeeDepartmentMatch(emp3, dep1);
+        employeeDepartmentMatch(emp4, dep4);
+        employeeDepartmentMatch(emp5, dep4);
+        employeeDepartmentMatch(emp6, dep3);
+        employeeDepartmentMatch(emp7, dep3);
+        employeeDepartmentMatch(emp8, dep3);
+        employeeDepartmentMatch(emp9, dep2);
+        employeeDepartmentMatch(emp10, dep2);
+        employeeDepartmentMatch(emp11, dep1);
+        employeeDepartmentMatch(emp12, dep1);
 
         EmployeeService employeeService = new EmployeeService();
         DepartmentService departmentService = new DepartmentService();
@@ -60,7 +67,9 @@ public class DataCreator {
         for (Employee emp : employeesList) {
             employeeService.add(emp);
         }
-
-
+    }
+    private static void employeeDepartmentMatch(Employee emp, Department dep) {
+        emp.setDepartment(dep);
+        dep.addEmployee(emp);
     }
 }

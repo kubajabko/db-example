@@ -19,7 +19,7 @@ public class Department {
         this.name = name;
     }
 
-    @ManyToMany(mappedBy = "departments")
+    @OneToMany(mappedBy = "department")
     Set<Employee> employees = new HashSet<>();
 
     public String getName() {

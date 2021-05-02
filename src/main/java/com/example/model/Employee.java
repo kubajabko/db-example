@@ -23,10 +23,10 @@ public class Employee {
         this.surname = surname;
     }
 
-    @ManyToMany
+    @ManyToOne
     @JoinTable(name = "department_employee", joinColumns = {
             @JoinColumn(name = "employee_id")}, inverseJoinColumns = {@JoinColumn(name = "department_id")})
-    Set<Department> departments = new HashSet<>();
+    Department department;
 
     public String getName() {
         return name;
@@ -37,7 +37,7 @@ public class Employee {
     }
 
     public void setDepartment(Department department) {
-        departments.add(department);
+        this.department = department;
     }
 
 }
