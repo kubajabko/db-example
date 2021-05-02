@@ -1,7 +1,6 @@
 package com.example.persistence;
 
 import com.example.model.Department;
-import com.example.model.Employee;
 import org.hibernate.Query;
 import org.hibernate.Transaction;
 

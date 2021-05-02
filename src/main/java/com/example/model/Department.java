@@ -15,7 +15,7 @@ public class Department {
     @Column
     private String name;
 
-    public Department(String name, int number) {
+    public Department(String name) {
         this.name = name;
     }
 
@@ -24,10 +24,6 @@ public class Department {
 
     public String getName() {
         return name;
-    }
-
-    public long getId() {
-        return id;
     }
 
     public void addEmployee(Employee employee) {

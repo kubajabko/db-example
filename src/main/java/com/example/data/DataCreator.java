@@ -12,13 +12,13 @@ public class DataCreator {
     public void createDataAndFillDB() {
         ArrayList<Employee> employeesList = new ArrayList<>();
         ArrayList<Department> departmentList = new ArrayList<>();
-        Department dep1 = new Department("R&D", 1);
+        Department dep1 = new Department("R&D");
         departmentList.add(dep1);
-        Department dep2 = new Department("Sales", 2);
+        Department dep2 = new Department("Sales");
         departmentList.add(dep2);
-        Department dep3 = new Department("Production", 3);
+        Department dep3 = new Department("Production");
         departmentList.add(dep3);
-        Department dep4 = new Department("Buyers", 4);
+        Department dep4 = new Department("Buyers");
         departmentList.add(dep4);
         Employee emp1 = new Employee("Adam", "Kowalski");
         employeesList.add(emp1);
@@ -68,6 +68,7 @@ public class DataCreator {
             employeeService.add(emp);
         }
     }
+
     private static void employeeDepartmentMatch(Employee emp, Department dep) {
         emp.setDepartment(dep);
         dep.addEmployee(emp);
