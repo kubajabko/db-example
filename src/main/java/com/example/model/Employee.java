@@ -23,6 +23,7 @@ public class Employee {
         this.name = name;
         this.surname = surname;
         this.departmentNumber = departmentNumber;
+
     }
 
     public String getName() {

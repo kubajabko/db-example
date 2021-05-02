@@ -1,4 +1,4 @@
-package com.example.persistance;
+package com.example.persistence;
 
 import org.hibernate.Session;
 
