@@ -1,6 +1,8 @@
 package com.example.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "department")
@@ -13,19 +15,23 @@ public class Department {
     @Column
     private String name;
 
-    @Column
-    private int number;
-
     public Department (String name, int number) {
         this.name = name;
-        this.number = number;
     }
+
+    @ManyToMany(mappedBy = "departments")
+    Set<Employee> employees = new HashSet<>();
 
     public String getName() {
         return name;
     }
 
-    public int getNumber() {
-        return number;
+    public long getId() {
+        return id;
     }
+
+    public void addEmployee(Employee employee) {
+        this.employees.add(employee);
+    }
+
 }

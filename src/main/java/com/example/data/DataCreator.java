@@ -20,32 +20,36 @@ public class DataCreator {
         departmentList.add(dep3);
         Department dep4 = new Department("Buyers", 4);
         departmentList.add(dep4);
-        Employee emp1 = new Employee("Adam", "Kowalski", 1);
+        Employee emp1 = new Employee("Adam", "Kowalski");
         employeesList.add(emp1);
-        Employee emp2 = new Employee("Jan", "Nowak", 1);
+        Employee emp2 = new Employee("Jan", "Nowak");
         employeesList.add(emp2);
-        Employee emp3 = new Employee("Piotr", "Wójcik", 2);
+        Employee emp3 = new Employee("Piotr", "Wójcik");
         employeesList.add(emp3);
-        Employee emp4 = new Employee("Paweł", "Kamiński", 1);
+        Employee emp4 = new Employee("Paweł", "Kamiński");
         employeesList.add(emp4);
-        Employee emp5 = new Employee("Michal", "Lewandowski", 3);
+        Employee emp5 = new Employee("Michal", "Lewandowski");
         employeesList.add(emp5);
-        Employee emp6 = new Employee("Wojciech", "Zieliński", 2);
+        Employee emp6 = new Employee("Wojciech", "Zieliński");
         employeesList.add(emp6);
-        Employee emp7 = new Employee("Agnieszka", "Szymańska", 1);
+        Employee emp7 = new Employee("Agnieszka", "Szymańska");
         employeesList.add(emp7);
-        Employee emp8 = new Employee("Kamil", "Woźniak", 2);
+        Employee emp8 = new Employee("Kamil", "Woźniak");
         employeesList.add(emp8);
-        Employee emp9 = new Employee("Karolina", "Dąbrowska", 4);
+        Employee emp9 = new Employee("Karolina", "Dąbrowska");
         employeesList.add(emp9);
-        Employee emp10 = new Employee("Michał", "Jankowski", 4);
+        Employee emp10 = new Employee("Michał", "Jankowski");
         employeesList.add(emp10);
-        Employee emp11 = new Employee("Tomasz", "Wojciechowski", 3);
+        Employee emp11 = new Employee("Tomasz", "Wojciechowski");
         employeesList.add(emp11);
-        Employee emp12 = new Employee("Damian", "Mazur", 3);
+        Employee emp12 = new Employee("Damian", "Mazur");
         employeesList.add(emp12);
-        Employee emp13 = new Employee("Patryk", "Krawczyk", 3);
+        Employee emp13 = new Employee("Patryk", "Krawczyk");
         employeesList.add(emp13);
+        dep1.addEmployee(emp1);
+        emp1.setDepartment(dep1);
+        dep1.addEmployee(emp2);
+        emp2.setDepartment(dep1);
 
         EmployeeService employeeService = new EmployeeService();
         DepartmentService departmentService = new DepartmentService();
@@ -56,5 +60,7 @@ public class DataCreator {
         for (Employee emp : employeesList) {
             employeeService.add(emp);
         }
+
+
     }
 }
