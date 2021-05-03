@@ -15,27 +15,27 @@ public class EmployeeEdit {
     HashMap<Long, Department> departmentHashMap = new HashMap<>();
 
     public void addEmployee(String name, String surname, String departmentName) {
-        if (name != null && surname != null) {
+        if (!name.isEmpty() && !surname.isEmpty()) {
             Employee emp = new Employee(name, surname);
             if (findDepartmentByName(departmentName) != null) {
                 emp.setDepartment(findDepartmentByName(departmentName));
                 findDepartmentByName(departmentName).addEmployee(emp);
                 employeeService.add(emp);
-                System.out.println("Employee added");
+                System.out.println("\nEmployee added");
             } else {
-                System.out.println("Department not found");
+                System.out.println("\nDepartment not found");
             }
         } else {
-            System.out.println("Either name or surname was empty");
+            System.out.println("\nEither name or surname was empty");
         }
     }
 
     public void removeEmployee(String name, String surname) {
         if (findEmployeeByNameAndSurname(name, surname) != null) {
             employeeService.delete(findEmployeeByNameAndSurname(name, surname));
-            System.out.println("Employee removed");
+            System.out.println("\nEmployee removed");
         } else {
-            System.out.println("Employee not found");
+            System.out.println("\nEmployee not found");
         }
     }
 
@@ -43,9 +43,9 @@ public class EmployeeEdit {
         if (findEmployeeByNameAndSurname(name, surname) != null && findDepartmentByName(newDepartmentName) != null) {
             findEmployeeByNameAndSurname(name, surname).setDepartment(findDepartmentByName(newDepartmentName));
             employeeService.update(findEmployeeByNameAndSurname(name, surname));
-            System.out.println("Employee department changed");
+            System.out.println("\nEmployee department changed");
         } else {
-            System.out.println("Either employee or department not found");
+            System.out.println("\nEither employee or department not found");
         }
     }
 

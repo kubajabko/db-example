@@ -25,4 +25,16 @@ public class DepartmentService {
         connector.getSession().save(department);
         transaction.commit();
     }
+
+    public void delete(Department department) {
+        Transaction transaction = connector.getSession().beginTransaction();
+        connector.getSession().delete(department);
+        transaction.commit();
+    }
+
+    public void update(Department department) {
+        Transaction transaction = connector.getSession().beginTransaction();
+        connector.getSession().merge(department);
+        transaction.commit();
+    }
 }

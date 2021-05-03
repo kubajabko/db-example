@@ -38,4 +38,8 @@ public class Department {
         return id;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }
