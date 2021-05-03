@@ -14,7 +14,7 @@ The app first creates SQLite database with employees and departments data (hardc
 
 ![DB](https://github.com/kubajabko/db-example/blob/master/img/db_tables.png)
 
-Besides creating and filling database the app have console menu with following options to modify data in database:
+Besides creating and filling database the app has console menu with following options to modify data in database:
 
 ![Menu](https://github.com/kubajabko/db-example/blob/master/img/menu.png)
 
