@@ -52,25 +52,25 @@ public class AppRunner {
                         EmployeeEdit employeeEdit = new EmployeeEdit();
                         switch (userEmployeeInput) {
                             case "1":
-                                System.out.println("Enter name:");
+                                System.out.println("Enter employee name:");
                                 String addName = scanner.nextLine();
-                                System.out.println("Enter surname");
+                                System.out.println("Enter employee surname");
                                 String addSurname = scanner.nextLine();
                                 System.out.println("Enter department name - must be existing");
                                 String addDepartmentName = scanner.nextLine();
                                 employeeEdit.addEmployee(addName, addSurname, addDepartmentName);
                                 break;
                             case "2":
-                                System.out.println("Enter name:");
+                                System.out.println("Enter employee name:");
                                 String removeName = scanner.nextLine();
-                                System.out.println("Enter surname");
+                                System.out.println("Enter employee surname");
                                 String removeSurname = scanner.nextLine();
                                 employeeEdit.removeEmployee(removeName, removeSurname);
                                 break;
                             case "3":
-                                System.out.println("Enter name:");
+                                System.out.println("Enter employee name:");
                                 String cdName = scanner.nextLine();
-                                System.out.println("Enter surname");
+                                System.out.println("Enter employee surname");
                                 String cdSurname = scanner.nextLine();
                                 System.out.println("Enter department name - must be existing");
                                 String cdDepartmentName = scanner.nextLine();
@@ -96,19 +96,19 @@ public class AppRunner {
                         DepartmentEdit departmentEdit = new DepartmentEdit();
                         switch (userDepartmentInput) {
                             case "1":
-                                System.out.println("Enter name:");
+                                System.out.println("Enter department name:");
                                 String addName = scanner.nextLine();
                                 departmentEdit.addDepartment(addName);
                                 break;
                             case "2":
-                                System.out.println("Enter name:");
+                                System.out.println("Enter department name - must be existing:");
                                 String removeName = scanner.nextLine();
                                 departmentEdit.removeDepartment(removeName);
                                 break;
                             case "3":
                                 System.out.println("Enter department name - must be existing");
                                 String oldDepartmentName = scanner.nextLine();
-                                System.out.println("Enter name:");
+                                System.out.println("Enter new department name:");
                                 String newDepartmentName = scanner.nextLine();
                                 departmentEdit.renameDepartment(oldDepartmentName, newDepartmentName);
                                 break;

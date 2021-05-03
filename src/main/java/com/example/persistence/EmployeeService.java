@@ -26,4 +26,16 @@ public class EmployeeService {
         transaction.commit();
     }
 
+    public void update(Employee employee) {
+        Transaction transaction = connector.getSession().beginTransaction();
+        connector.getSession().merge(employee);
+        transaction.commit();
+    }
+
+    public void delete(Employee employee) {
+        Transaction transaction = connector.getSession().beginTransaction();
+        connector.getSession().delete(employee);
+        transaction.commit();
+    }
+
 }

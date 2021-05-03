@@ -42,4 +42,8 @@ public class Employee {
         return department;
     }
 
+    public long getId() {
+        return id;
+    }
+
 }

@@ -34,4 +34,8 @@ public class Department {
         return employees;
     }
 
+    public long getId() {
+        return id;
+    }
+
 }
